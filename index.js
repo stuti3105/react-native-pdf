@@ -15,10 +15,10 @@ import {
     Platform,
     ViewPropTypes,
     StyleSheet,
-    Image
+    Image,
+    ProgressBarAndroid
 } from 'react-native';
 
-import { ProgressBar } from '@react-native-community/progress-bar-android'
 import { ProgressView } from '@react-native-community/progress-view'
 import ReactNativeBlobUtil from 'react-native-blob-util'
 
@@ -402,7 +402,7 @@ export default class Pdf extends Component {
                                 {this.props.activityIndicator
                                     ? this.props.activityIndicator
                                     : Platform.OS === 'android'
-                                        ? <ProgressBar
+                                        ? <ProgressBarAndroid
                                             progress={this.state.progress}
                                             indeterminate={false}
                                             styleAttr="Horizontal"
